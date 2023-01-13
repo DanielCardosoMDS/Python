@@ -71,7 +71,7 @@ for loja in dicionario_lojas:
     outlook = win32.Dispatch('outlook.application')
     nome = emails_df.loc[emails_df['Loja']==loja,'Gerente'].values[0]#como é um DF só com uma informação, podemos usar o .values[0] para pegar essa informação
     mail = outlook.CreateItem(0)
-    mail.To = 'danielcardosomds@gmail.com'#emails_df.loc[emails_df['E-mail']==loja,''].values[0]
+    mail.To = emails_df.loc[emails_df['E-mail']==loja,''].values[0]
     mail.Subject = f'OnePage Dia {dia_indicador.day}/{dia_indicador.month} - Loja {loja}'
     # lógica para mudar a cor do ◙
     if faturamento_dia >= meta_faturamento_dia:
@@ -189,7 +189,7 @@ faturamento_loja_dia.to_excel(r'C:\Users\T-Gamer\Desktop\python\Projeto 1\Projet
 #Envio de email para Diretoria
 outlook = win32.Dispatch('outlook.application')
 mail = outlook.CreateItem(0)
-mail.To = emails_df.loc[emails_df['Loja']=='Diretoria','E-mail'].values[0]#'danielcardosomds@gmail.com'emails_df.loc[emails_df['E-mail']==loja,''].values[0]
+mail.To = emails_df.loc[emails_df['Loja']=='Diretoria','E-mail'].values[0]
 mail.Subject = f'Ranking Dia {dia_indicador.day}/{dia_indicador.month}'
 mail.Body = f'''
 Prezados, bom dia!
