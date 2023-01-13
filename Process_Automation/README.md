@@ -19,6 +19,12 @@
 * Criar ranking das lojas para diretoria
 * Enviar e-mail para diretoria
 
+### ✉E-mail para os gerentes
+![email_gerente](https://github.com/DanielCardosoMDS/Python/blob/main/Process_Automation/Imagens/e-mail_final_gerente.PNG)
+
+### ✉E-mail para a diretoria
+![email_gerente](https://github.com/DanielCardosoMDS/Python/blob/main/Process_Automation/Imagens/e-mail_final_diretoria.PNG)
+
 ## 🔧Ferramentas
 - Python.
 
