@@ -20,29 +20,29 @@ vendas_df.head()
 
 #criando o DF de cada loja
 dicionario_lojas = {} #aqui foi usando um dicionário pela sua praticidade, porque ficava mais fácil usar ele dentro de um for, pois se eu colocar uma chave que ele não tem, essa chave é criada.
-                       pois, se eu colocar uma chave que ele não tem, essa chave é criada.
+                       
 for loja in lojas_df['Loja']:
     dicionario_lojas[loja] = vendas_df.loc[vendas_df['Loja']==loja,:]
 
-# O indicar tem que rodar no último dia disponível na base de dados, com isso, iremos usar o max(), pois a data é tratada como
-# um número
+# O indicar tem que rodar no último dia disponível na base de dados, com isso, iremos usar o max(), pois a data é tratada como um número
+
 dia_indicador = vendas_df['Data'].max()
 
 #identificar se pasta já existe
 caminho_backup = pathlib.Path(r'C:\Users\T-Gamer\Desktop\python\Projeto 1\Projeto AutomacaoIndicadores\Backup Arquivos Lojas')
 arquivos_pasta_backup = caminho_backup.iterdir()#mostra todos os aquivos dentro de uma pasta
-lista_nomes_backup = [arquivo.name for arquivo in arquivos_pasta_backup]#rever estrutura de listcompreehension
-print(lista_nomes_backup)
+lista_nomes_backup = [arquivo.name for arquivo in arquivos_pasta_backup]
+
 
 #criando pastas
 for loja in dicionario_lojas:
-    if loja not in lista_nomes_backup:#if not é para dizer se não está em
+    if loja not in lista_nomes_backup:
         nova_pasta = caminho_backup / loja #consigo usar uma barra(/) para concatenar por causa do pathlib.Path
-        nova_pasta.mkdir()#mkdi() cria uma pasta
+        nova_pasta.mkdir()
         #salvar dentro da pasta
         nome_arquivo = '{}_{}_{}.xlsx'.format(dia_indicador.month,dia_indicador.day,loja)#aqui o nome do arquivo é feito
-        local_arquivo = caminho_backup/loja/nome_arquivo#esse local é a junção do caminho, mais o nome da loja que é o nome da pasta e mais o nome do arquivo
-        dicionario_lojas[loja].to_excel(local_arquivo)#tranformando o DF do pandas em um excel e salvnado dentro do local estipulado
+        local_arquivo = caminho_backup/loja/nome_arquivo#esse local é a junção do caminho mais o nome da loja que é o nome da pasta e mais o nome do arquivo
+        dicionario_lojas[loja].to_excel(local_arquivo)#tranformando o DF do pandas em um excel e salvando dentro do local estipulado
 
 #Variáveis 
 meta_faturamento_ano = 1650000
