@@ -9,7 +9,7 @@
 * Buscar produto iphone 12 no Google Shopping e no Buscapé
 * Coletar as informações dos produtos e tratá-las de acordo com os critérios
 * Criar uma planilha com as ofertas encontradas
-* Enviar essa planilha de ofertas por e-mail
+* Enviar essa planilha de ofertas em forma de tabela por e-mail
 
 
 ### ✉E-mail com as ofertas
