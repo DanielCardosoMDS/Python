@@ -1,5 +1,5 @@
 
-# 📖Sobre  Projeto
+# 📖Sobre o Projeto
 
 **Busca_Produtos** é um projeto que tem por objetivo automatizar o processo de busca de produtos na internet através do Web Scraping. Nesse projeto, será feito a busca de dois produtos em dois sites, Google Shopping e Buscapé, e irei receber um e-mail com uma tebela contendo os produtos encontrados que atenderam todos os critérios de busca.
 
