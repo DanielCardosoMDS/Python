@@ -1,4 +1,4 @@
-# 📖Sobre  Projeto
+# 📖Sobre o Projeto
 
 **Process_Automation** é um projeto que tem por objetivo automatizar o processo de gestão de indicadores de uma rede de lojas. É enviado para cada gerente um e-mail contendo um OnePage e uma planilha com as vendas do dia e o acumulado do ano. E para a diretoria é enviado um e-mail com o ranking das lojas do dia e do ano.
 
