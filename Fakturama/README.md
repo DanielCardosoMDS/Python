@@ -1,4 +1,4 @@
-## 📖Sobre  Projeto
+## 📖Sobre o Projeto
 
 **Fakturama** é um projeto de RPA que consiste na automatização do cadastro de produtos através de uma base de dados em excel. A proposta do código, além da automatização, é usar o reconhecimento de imagem da biblioteca **pyautogui**.
 
